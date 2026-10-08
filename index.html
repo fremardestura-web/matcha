@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="KAIEN Matcha, a pastel recipe journal for dreamy matcha lattes and creative matcha drinks.">
+  <title>KAIEN | Matcha Recipe Journal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="grain"></div>
+  <header class="site-header" id="home">
+    <a class="logo" href="#home" aria-label="KAIEN home">KAIEN<span>°</span></a>
+    <nav>
+      <a href="#recipes">recipes</a>
+      <a href="#guide">matcha guide</a>
+      <a href="#about">about</a>
+    </nav>
+    <button class="menu-btn" aria-label="Open menu">☰</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">THE MATCHA EDIT · KAIEN</p>
+        <h1>soft days,<br><em>strong matcha.</em></h1>
+        <p class="hero-text">A little recipe journal for creamy classics, fruity layers, cloud foam and playful matcha combinations.</p>
+        <div class="hero-actions">
+          <a class="pill dark" href="#recipes">explore recipes <span>↘</span></a>
+          <a class="text-link" href="#guide">how to build a matcha</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="Pastel matcha drink illustration">
+        <div class="sticker sticker-one">KAIEN<br><small>MATCHA CLUB</small></div>
+        <div class="strawberry">✦</div>
+        <div class="hero-glass">
+          <div class="hero-ice"></div>
+          <div class="hero-matcha"></div>
+          <div class="hero-milk"></div>
+          <div class="hero-foam"></div>
+        </div>
+        <div class="cherry cherry-a">●</div>
+        <div class="cherry cherry-b">●</div>
+        <div class="mini-note">whisk<br>slowly ♡</div>
+      </div>
+    </section>
+
+    <section class="marquee" aria-hidden="true">
+      <div>MATCHA LOVER · KAIEN · WHISK · POUR · SIP · REPEAT · MATCHA LOVER · KAIEN ·</div>
+    </section>
+
+    <section class="intro section" id="about">
+      <div>
+        <p class="eyebrow">01 / THE JOURNAL</p>
+        <h2>Matcha,<br><em>but make it you.</em></h2>
+      </div>
+      <p class="intro-copy">KAIEN collects ten dreamy matcha drinks, from a clean everyday latte to layered strawberry, cherry, coconut, Earl Grey, espresso and cloud-style creations. Every recipe is written as a flexible home recipe, so you can adjust sweetness, milk and toppings to your taste.</p>
+    </section>
+
+    <section class="recipe-section section" id="recipes">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">02 / MATCHA LOVER</p>
+          <h2>Pick your mood.</h2>
+        </div>
+        <div class="filters" role="group" aria-label="Filter recipes">
+          <button class="filter active" data-filter="all">all</button>
+          <button class="filter" data-filter="classic">classic</button>
+          <button class="filter" data-filter="fruity">fruity</button>
+          <button class="filter" data-filter="cloud">cloudy</button>
+          <button class="filter" data-filter="coffee">coffee</button>
+        </div>
+      </div>
+
+      <div class="recipe-grid" id="recipeGrid"></div>
+    </section>
+
+    <section class="feature section" id="guide">
+      <div class="feature-photo">
+        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/bbc74b158198601.638729f770bd2.jpg" alt="Layered matcha drink inspired by SOKO Cake Bake & Brunch styling" loading="lazy">
+        <span class="photo-credit">visual reference · SOKO-inspired matcha styling</span>
+      </div>
+      <div class="feature-copy">
+        <p class="eyebrow">03 / THE FORMULA</p>
+        <h2>Build a better<br><em>matcha latte.</em></h2>
+        <ol class="steps">
+          <li><b>Whisk.</b> Sift 1–2 tsp matcha. Add 50–70 ml warm water, around 70–80°C, then whisk until smooth and lightly foamy.</li>
+          <li><b>Balance.</b> Add 10–20 ml syrup or sweetener if your milk and toppings are unsweetened.</li>
+          <li><b>Layer.</b> Add ice, milk and fruit or foam slowly for clean café-style layers.</li>
+          <li><b>Finish.</b> Dust with matcha, add fruit, a cloud of cold foam, or your favorite crunchy topping.</li>
+        </ol>
+        <div class="tip-card"><span>✿</span><p><b>KAIEN tip:</b> Avoid boiling water. Very hot water can make matcha taste harsher and more bitter.</p></div>
+      </div>
+    </section>
+
+    <section class="closing section">
+      <p class="eyebrow">A LITTLE NOTE FROM KAIEN</p>
+      <h2>Take your time.<br><em>Whisk something lovely.</em></h2>
+      <a class="pill pink" href="#recipes">find your next cup <span>↗</span></a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div><span class="logo">KAIEN<span>°</span></span><p>matcha recipes for soft mornings & slow afternoons.</p></div>
+    <div class="footer-right"><span>© 2026 KAIEN</span><span>made with matcha ♡</span></div>
+  </footer>
+
+  <div class="modal" id="recipeModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close></div>
+    <article class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" data-close aria-label="Close recipe">×</button>
+      <div class="modal-art" id="modalArt"></div>
+      <div class="modal-content">
+        <p class="eyebrow" id="modalTag"></p>
+        <h2 id="modalTitle"></h2>
+        <p class="modal-description" id="modalDescription"></p>
+        <div class="recipe-columns">
+          <div><h3>ingredients</h3><ul id="modalIngredients"></ul></div>
+          <div><h3>method</h3><ol id="modalMethod"></ol></div>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
